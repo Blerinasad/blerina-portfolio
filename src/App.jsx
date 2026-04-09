@@ -9,7 +9,7 @@ import ContactSection from "./sections/home/ContactSection";
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-[#020617] text-white">
       <Navbar />
       <HeroSection />
       <AboutSection />
