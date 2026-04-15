@@ -23,10 +23,26 @@ const de = {
   linkedinLabel: "LinkedIn",
 },
 about: {
-  badge: "Über mich",
+  badge: "Über Mich",
   title: "Leidenschaftliche Full-Stack Entwicklerin",
-  description:
-    "Ich entwickle moderne Webanwendungen mit sauberer Architektur, skalierbarer Backend-Logik und benutzerfreundlichen Interfaces.",
+  text1:
+    "Ich bin Studentin der Informatik und Computertechnik mit großem Interesse an Full-Stack-Entwicklung, modernen Webanwendungen und nutzerorientierten digitalen Erlebnissen.",
+  text2:
+    "Ich arbeite gerne mit Frontend- und Backend-Technologien, entwickle responsive Oberflächen, APIs und Datenbanklogik und setze Ideen in praktische, funktionale Lösungen um.",
+  text3:
+    "Mein Ziel ist es, mich durch reale Projekte, Praktika und Zusammenarbeit weiterzuentwickeln und dabei technische Fähigkeiten auszubauen und Arbeit mit echtem Mehrwert zu schaffen.",
+  stats: {
+    projects: "Projekte",
+    certificates: "Zertifikate",
+    languages: "Sprachen",
+  },
+  languagesTitle: "Sprachen",
+  albanian: "Albanisch",
+  english: "Englisch",
+  german: "Deutsch",
+  native: "Muttersprache",
+  advanced: "Fortgeschritten",
+  intermediate: "Mittelstufe",
 },
 skills: {
   badge: "Fähigkeiten",
@@ -104,7 +120,7 @@ certificates: {
 contact: {
   badge: "Kontakt",
   title: "Lass uns vernetzen",
-  desc: "Du kannst mich über die folgenden Kontaktdaten erreichen.",
+  desc: "Ich bin immer offen für neue Möglichkeiten, Kooperationen und reale Projekte. Wenn du eine Idee oder ein Projekt hast oder dich einfach verbinden möchtest — kontaktiere mich gerne.",
   email: "E-Mail",
   phone: "Telefon",
   location: "Standort",

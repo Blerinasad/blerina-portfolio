@@ -25,8 +25,24 @@ const sq = {
 about: {
   badge: "Rreth Meje",
   title: "Zhvilluese Full-Stack e përkushtuar",
-  description:
-    "Ndërtoj aplikacione moderne me arkitekturë të pastër, backend të fuqishëm dhe ndërfaqe të lehtë për përdorim.",
+  text1:
+    "Jam studente e Shkencave Kompjuterike dhe Inxhinieris me interes të fortë në full-stack development, aplikacione moderne web dhe eksperienca digjitale të fokusuara te përdoruesi.",
+  text2:
+    "Më pëlqen të punoj me teknologji frontend dhe backend, të ndërtoj ndërfaqe responsive, të zhvilloj API, të menaxhoj databaza dhe t’i kthej idetë në zgjidhje praktike dhe funksionale.",
+  text3:
+    "Qëllimi im është të vazhdoj të rritem përmes projekteve reale, internship-eve dhe bashkëpunimeve ku mund të përmirësoj aftësitë teknike dhe të krijoj punë me vlerë reale.",
+  stats: {
+    projects: "Projekte",
+    certificates: "Certifikata",
+    languages: "Gjuhë",
+  },
+  languagesTitle: "Gjuhët",
+  albanian: "Shqip",
+  english: "Anglisht",
+  german: "Gjermanisht",
+  native: "Gjuhë amtare",
+  advanced: "E avancuar",
+  intermediate: "Mesatare",
 },
 skills: {
   badge: "Aftësitë",
@@ -104,10 +120,10 @@ certificates: {
 contact: {
   badge: "Kontakti",
   title: "Le të lidhemi",
-  desc: "Mund të më kontaktosh përmes të dhënave të mëposhtme.",
+  desc: "Jam gjithmonë e hapur për mundësi të reja, bashkëpunime dhe projekte reale. Nëse ke një ide, projekt apo thjesht dëshiron të lidhemi — mos hezito të më kontaktosh.",
   email: "Email",
   phone: "Telefoni",
-  location: "Në",
+  location: "Bazuar në",
   locationValue: "Prishtinë, Kosovë",
 },
 footer: {

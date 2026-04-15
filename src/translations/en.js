@@ -25,8 +25,24 @@ hero: {
 about: {
   badge: "About Me",
   title: "Passionate Full-Stack Developer",
-  description:
-    "I build modern web applications with clean architecture, scalable backend logic, and user-friendly interfaces.",
+  text1:
+    "I am a Computer Science and Engineering student with a strong interest in full-stack development, modern web applications, and user-focused digital experiences.",
+  text2:
+    "I enjoy working with frontend and backend technologies, building responsive interfaces, developing APIs, managing databases, and turning ideas into practical, functional solutions.",
+  text3:
+    "My goal is to keep growing through real projects, internships, and collaborations where I can improve my technical skills and create work with real value.",
+  stats: {
+    projects: "Projects",
+    certificates: "Certificates",
+    languages: "Languages",
+  },
+  languagesTitle: "Languages",
+  albanian: "Albanian",
+  english: "English",
+  german: "German",
+  native: "Native",
+  advanced: "Advanced",
+  intermediate: "Intermediate",
 },
 skills: {
   badge: "Skills",
@@ -104,7 +120,7 @@ certificates: {
 contact: {
   badge: "Contact",
   title: "Let’s Connect",
-  desc: "You can reach me through the following contact details.",
+  desc: "I’m always open to new opportunities, collaborations, and real-world projects. Whether you have an idea, a project, or just want to connect — feel free to reach out.",
   email: "Email",
   phone: "Phone",
   location: "Based in",

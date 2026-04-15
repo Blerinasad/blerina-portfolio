@@ -5,10 +5,6 @@ import { useEffect, useState } from "react";
 
 const currentProjects = [
   {
-    title: "2FA Auth System",
-    tech: ["React", "Node.js","MongoDB","JWT","Tailwind", "Express", "Docker", "MySQL"],
-  },
-  {
     title: "Smart Kitchen & Meal Planner",
     tech: ["React", "Node.js","MongoDB","JWT","Tailwind", "Express", "Docker", "MySQL"],
   },
@@ -101,7 +97,6 @@ export default function HeroSection() {
               </span>
               <div className="text-left">
                 <p className="text-xs text-slate-400 leading-none mb-1">
-                  {t.hero.githubLabel}
                 </p>
                 <p className="text-sm text-white font-medium leading-none">
                   Blerinasad
@@ -120,7 +115,6 @@ export default function HeroSection() {
               </span>
               <div className="text-left">
                 <p className="text-xs text-slate-400 leading-none mb-1">
-                  {t.hero.linkedinLabel}
                 </p>
                 <p className="text-sm text-white font-medium leading-none">
                   blerina-sadiku
