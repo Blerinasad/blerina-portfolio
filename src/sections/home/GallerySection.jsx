@@ -1,47 +1,47 @@
 import { useState } from "react";
 import Reveal from "../../components/Reveal";
-
-const projects = [
-  {
-    title: "Mobileria Nita",
-    subtitle: "Furniture Management Platform",
-    description:
-      "A furniture platform focused on product management, structured admin pages, and a clean user experience for showcasing and managing furniture items.",
-    tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    screenshots: Array.from({ length: 11 }, (_, i) =>
-      `/projects/mobileria-nita/mobileria-nita${i + 1}.png`
-    ),
-    live: null,
-    github: "https://github.com/Blerinasad",
-  },
-  {
-  title: "Higher Education",
-  subtitle: "Full-Stack Academic Management System",
-  description:
-    "A full-stack higher education platform built with backend, frontend, database design, dashboard, CRUD operations, authentication, authorization, responsive UI, and secure data handling based on academic project requirements.",
-  tech: ["React", "Node.js", "MySQL", "JWT", "Dashboard", "CRUD"],
-  screenshots: [
-    "/projects/higher-education/edu1.png",
-    "/projects/higher-education/edu2.png",
-    "/projects/higher-education/edu3.png",
-    "/projects/higher-education/edu4.png",
-  ],
-  live: null,
-  github: "https://github.com/Blerinasad",
-},
-  {
-    title: "ETEAM Website",
-    subtitle: "Business Website",
-    description:
-      "A modern responsive website for a construction materials company, focused on professional presentation, multilingual structure, and real-world deployment.",
-    tech: ["React", "Tailwind", "Node.js", "Nodemailer"],
-    screenshots: null,
-    live: "https://eteam.rf.gd/?i=1",
-    github: "https://github.com/Blerinasad",
-  },
-];
+import { useLanguage } from "../../components/LanguageContext";
 
 export default function GallerySection() {
+  const { t } = useLanguage();
+
+  const projects = [
+    {
+      title: t.projects.items.mobileria.title,
+      subtitle: t.projects.items.mobileria.subtitle,
+      description: t.projects.items.mobileria.description,
+      tech: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      screenshots: Array.from({ length: 11 }, (_, i) =>
+        `/projects/mobileria-nita/mobileria-nita${i + 1}.png`
+      ),
+      live: null,
+      github: "https://github.com/Blerinasad",
+    },
+    {
+      title: t.projects.items.higher.title,
+      subtitle: t.projects.items.higher.subtitle,
+      description: t.projects.items.higher.description,
+      tech: ["React", "Node.js", "MySQL", "JWT", "CRUD"],
+      screenshots: [
+        "/projects/higher-education/edu1.png",
+        "/projects/higher-education/edu2.png",
+        "/projects/higher-education/edu3.png",
+        "/projects/higher-education/edu4.png",
+      ],
+      live: null,
+      github: "https://github.com/Blerinasad",
+    },
+    {
+      title: t.projects.items.eteam.title,
+      subtitle: t.projects.items.eteam.subtitle,
+      description: t.projects.items.eteam.description,
+      tech: ["React", "Tailwind", "Node.js", "Nodemailer"],
+      screenshots: null,
+      live: "https://eteam.rf.gd/?i=1",
+      github: "https://github.com/Blerinasad",
+    },
+  ];
+
   const [activeProject, setActiveProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -68,22 +68,18 @@ export default function GallerySection() {
   };
 
   return (
-    <section id="projects" className="bg-[#0f172a] py-24 px-6">
+    <section id="projects" className="bg-[#0d0a18] py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <Reveal>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <p className="text-sm uppercase tracking-[0.35em] text-slate-400 mb-4">
-              Projects
+            <p className="text-sm uppercase tracking-[0.35em] text-pink-200/80 mb-4">
+              {t.projects.badge}
             </p>
-
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-              Things I’ve Actually Built
+              {t.projects.title}
             </h2>
-
             <p className="mt-5 text-slate-400 text-base md:text-lg leading-8">
-              A selection of real projects I have worked on, combining web
-              development, responsive design, backend logic, and practical
-              problem-solving.
+              {t.projects.desc}
             </p>
           </div>
         </Reveal>
@@ -91,9 +87,9 @@ export default function GallerySection() {
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 0.08}>
-              <article className="h-full rounded-[28px] border border-white/10 bg-[#111827] p-7 shadow-[0_18px_50px_rgba(0,0,0,0.28)] hover:-translate-y-2 hover:border-white/20 transition duration-300 flex flex-col">
+              <article className="h-full rounded-[28px] border border-pink-300/10 bg-[#151222]/80 p-7 shadow-[0_18px_50px_rgba(0,0,0,0.28)] hover:-translate-y-2 hover:border-pink-300/20 transition duration-300 flex flex-col">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.25em] text-[#d4a017] mb-4">
+                  <p className="text-xs uppercase tracking-[0.25em] text-[#f9a8d4] mb-4">
                     {project.subtitle}
                   </p>
 
@@ -117,38 +113,38 @@ export default function GallerySection() {
                   </div>
                 </div>
 
-                <div className="mt-auto flex flex-wrap gap-4">
-                  {project.screenshots && (
-                    <button
-                      onClick={() => openGallery(project)}
-                      className="px-5 py-2.5 rounded-full bg-white text-black font-medium hover:bg-slate-200 transition"
-                    >
-                      View Screenshots
-                    </button>
-                  )}
+              <div className="mt-auto flex flex-wrap gap-4">
+  {project.screenshots && (
+    <button
+      onClick={() => openGallery(project)}
+      className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#9b6dff] via-[#c084fc] to-[#f472b6] text-white font-medium hover:opacity-95 transition shadow-[0_10px_30px_rgba(244,114,182,0.22)]"
+    >
+      {t.projects.viewScreenshots}
+    </button>
+  )}
 
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-5 py-2.5 rounded-full bg-[#d4a017] text-black font-medium hover:opacity-90 transition"
-                    >
-                      Live Preview
-                    </a>
-                  )}
+  {project.live && (
+    <a
+      href={project.live}
+      target="_blank"
+      rel="noreferrer"
+      className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#9b6dff] via-[#c084fc] to-[#f472b6] text-white font-medium hover:opacity-95 transition shadow-[0_10px_30px_rgba(244,114,182,0.22)]"
+    >
+      {t.projects.livePreview}
+    </a>
+  )}
 
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-5 py-2.5 rounded-full border border-white/15 text-white font-medium hover:bg-white hover:text-black transition"
-                    >
-                      GitHub
-                    </a>
-                  )}
-                </div>
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noreferrer"
+      className="px-5 py-2.5 rounded-full border border-white/15 text-white font-medium hover:bg-white hover:text-black transition"
+    >
+      {t.projects.github}
+    </a>
+  )}
+</div>
               </article>
             </Reveal>
           ))}
@@ -170,7 +166,8 @@ export default function GallerySection() {
                   {activeProject.title}
                 </h3>
                 <p className="text-slate-400 mt-1">
-                  Screenshot {currentIndex + 1} of {activeProject.screenshots.length}
+                  {t.projects.screenshot} {currentIndex + 1} {t.projects.of}{" "}
+                  {activeProject.screenshots.length}
                 </p>
               </div>
 
@@ -178,7 +175,7 @@ export default function GallerySection() {
                 onClick={closeGallery}
                 className="px-5 py-2.5 rounded-full bg-white text-black font-medium hover:bg-slate-200 transition"
               >
-                Close
+                {t.projects.close}
               </button>
             </div>
 
@@ -197,14 +194,14 @@ export default function GallerySection() {
                     onClick={prevImage}
                     className="px-5 py-2.5 rounded-full border border-white/15 text-white font-medium hover:bg-white hover:text-black transition"
                   >
-                    Previous
+                    {t.projects.previous}
                   </button>
 
                   <button
                     onClick={nextImage}
                     className="px-5 py-2.5 rounded-full border border-white/15 text-white font-medium hover:bg-white hover:text-black transition"
                   >
-                    Next
+                    {t.projects.next}
                   </button>
                 </div>
 
