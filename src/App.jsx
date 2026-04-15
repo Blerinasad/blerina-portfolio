@@ -6,6 +6,7 @@ import ServicesSection from "./sections/home/ServicesSection";
 import GallerySection from "./sections/home/GallerySection";
 import StatsSection from "./sections/home/StatsSection";
 import ContactSection from "./sections/home/ContactSection";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <StatsSection />
       <ContactSection />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
